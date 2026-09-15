@@ -1,14 +1,15 @@
 # POP Zero
 
-Aplicação estática para extrair o conteúdo de POPs antigos em `.docx`, organizar as seções conforme a Norma Zero e gerar um novo Word contendo apenas o corpo padronizado.
+Aplicação estática para extrair o conteúdo de POPs antigos em `.docx`, organizar as seções conforme a Norma Zero e gerar um novo Word completo no padrão institucional.
 
 ## Recursos
 
 - Processamento inteiramente no navegador.
 - Identificação automática das oito seções da Norma Zero.
 - Revisão e edição antes da exportação.
-- Preservação de tabelas como elementos editáveis.
-- Exportação em `.docx` com Arial 12.
+- Preservação de tabelas como elementos editáveis e recuperação de tabelas antigas montadas com tabulações.
+- Formulário para título, processo, código, versão, elaboração, aprovação, datas e vigência.
+- Exportação em `.docx` com Arial 12, cabeçalho institucional, sumário automático, histórico das revisões, rodapé e paginação.
 - Compatível com GitHub Pages.
 
 ## Publicar no GitHub Pages
@@ -38,8 +39,9 @@ O arquivo DOCX é processado localmente. Nenhum conteúdo do documento é enviad
 ## Limitações
 
 - O reconhecimento depende dos títulos das seções. Variações muito diferentes podem exigir ajuste manual.
-- Elementos complexos, como caixas de texto, imagens e fluxogramas, não são importados automaticamente.
+- Elementos complexos, como imagens e fluxogramas, não são importados automaticamente.
 - A tela de revisão permite corrigir ou complementar qualquer seção antes da geração.
+- O Microsoft Word poderá solicitar a atualização do sumário ao abrir o arquivo; confirme a atualização para recalcular os números das páginas.
 
 ## Bibliotecas utilizadas
 

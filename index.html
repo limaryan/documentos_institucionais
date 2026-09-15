@@ -51,13 +51,32 @@
       <div id="sections" class="sections"></div>
     </section>
 
-    <section id="exportPanel" class="panel export-panel" hidden aria-labelledby="export-title">
+    <section id="metadataPanel" class="panel" hidden aria-labelledby="metadata-title">
       <div>
         <span class="step">3</span>
-        <h2 id="export-title">Gere o conteúdo padronizado</h2>
-        <p>O arquivo final terá Arial 12, títulos numerados, tabelas editáveis e somente o corpo do POP.</p>
+        <h2 id="metadata-title">Preencha o cabeçalho e o controle do documento</h2>
+        <p>Essas informações serão inseridas no cabeçalho e no rodapé de todas as páginas.</p>
       </div>
-      <button id="generateBtn" class="button primary" type="button">Baixar Word padronizado</button>
+      <div class="metadata-grid">
+        <label class="wide">Título do documento<input id="metaTitle" type="text" placeholder="Ex.: Dispensação de medicamentos na farmácia ambulatorial"></label>
+        <label>Processo<input id="metaProcess" type="text" placeholder="Ex.: Farmácia ambulatorial"></label>
+        <label>Código<input id="metaCode" type="text" value="IMIP.POP.XXX.XXX"></label>
+        <label>Versão<input id="metaVersion" type="text" value="00"></label>
+        <label>Vigência<input id="metaValidity" type="text" value="2 anos"></label>
+        <label>Elaboração<input id="metaAuthor" type="text" placeholder="Nome"></label>
+        <label>Data da elaboração<input id="metaAuthorDate" type="date"></label>
+        <label>Aprovação<input id="metaApproval" type="text" placeholder="Nome"></label>
+        <label>Data da aprovação<input id="metaApprovalDate" type="date"></label>
+      </div>
+    </section>
+
+    <section id="exportPanel" class="panel export-panel" hidden aria-labelledby="export-title">
+      <div>
+        <span class="step">4</span>
+        <h2 id="export-title">Gere o POP completo</h2>
+        <p>O Word terá cabeçalho institucional, sumário automático, seções, histórico de revisões, rodapé e paginação.</p>
+      </div>
+      <button id="generateBtn" class="button primary" type="button">Baixar POP completo</button>
     </section>
   </main>
 
