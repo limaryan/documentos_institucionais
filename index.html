@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Organizador de conteúdo de POPs para o modelo Norma Zero">
+  <title>POP Zero</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">P0</span>
+      <div><strong>POP Zero</strong><small>Preparador para Norma Zero</small></div>
+    </div>
+    <span class="privacy">Processamento local no navegador</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">PROCEDIMENTO OPERACIONAL PADRÃO</p>
+      <h1>Transforme um POP antigo em conteúdo pronto para a Norma Zero</h1>
+      <p>Envie o arquivo, confira as seções identificadas e baixe um Word limpo para copiar e colar no modelo institucional.</p>
+    </section>
+
+    <section class="panel upload-panel" aria-labelledby="upload-title">
+      <div>
+        <span class="step">1</span>
+        <h2 id="upload-title">Selecione o POP antigo</h2>
+        <p>Formato aceito: DOCX. O documento não sai do seu computador.</p>
+      </div>
+      <label class="dropzone" id="dropzone">
+        <input id="fileInput" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+        <span class="upload-icon">↑</span>
+        <strong>Arraste o arquivo aqui</strong>
+        <span>ou clique para selecionar</span>
+      </label>
+      <div id="fileStatus" class="file-status" hidden></div>
+    </section>
+
+    <section id="reviewPanel" class="panel" hidden aria-labelledby="review-title">
+      <div class="section-head">
+        <div>
+          <span class="step">2</span>
+          <h2 id="review-title">Revise o conteúdo identificado</h2>
+          <p>Edite diretamente nos campos. As tabelas do arquivo serão mantidas.</p>
+        </div>
+        <button id="clearBtn" class="button secondary" type="button">Trocar arquivo</button>
+      </div>
+      <div id="warnings" class="warnings" hidden></div>
+      <div id="sections" class="sections"></div>
+    </section>
+
+    <section id="exportPanel" class="panel export-panel" hidden aria-labelledby="export-title">
+      <div>
+        <span class="step">3</span>
+        <h2 id="export-title">Gere o conteúdo padronizado</h2>
+        <p>O arquivo final terá Arial 12, títulos numerados, tabelas editáveis e somente o corpo do POP.</p>
+      </div>
+      <button id="generateBtn" class="button primary" type="button">Baixar Word padronizado</button>
+    </section>
+  </main>
+
+  <footer>POP Zero · Ferramenta local para apoio à padronização documental</footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="vendor/jszip.min.js"></script>
+  <script src="vendor/docx.iife.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
